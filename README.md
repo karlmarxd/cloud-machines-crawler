@@ -5,7 +5,7 @@
 ## Getting started
 
 ```
-git clone https://gitlab.com/marxsouza12/technical-test-jusbrasil.git
+git clone https://gitlab.com/marxsouza12/cloud-machines-crawler.git
 pip install -r requirements.txt
 python main.py
 ```
