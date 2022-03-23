@@ -5,7 +5,7 @@ class DigitalOceanMachinesCrawler:
     platform = "digitalocean"
     page_url = "https://www.digitalocean.com/pricing"
 
-    def get_machines(self) -> None -> list[dict[str, str]]:
+    def get_machines(self) -> list[dict[str, str]]:
         machines: list[dict[str, str]] = []
         cloud_compute_machine_rows = []
         for machine in cloud_compute_machine_rows:

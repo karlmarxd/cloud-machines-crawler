@@ -1,4 +1,4 @@
-from machinescrawlers import MachinesCrawler, linode
+from machinescrawlers import MachinesCrawler
 
 vultr_machines = MachinesCrawler("vultr")
 linode_machines = MachinesCrawler("linode")
