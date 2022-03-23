@@ -13,9 +13,11 @@ install:
     - branches
 
 black:
-  stage: codesyntax
+  stage: linting+formatting
   image: python:3.10
   script:
+    - pip install -U pip 
+    - pip install -U flake8
     - black --config pyproject.toml --check .
   only:
     - branches
@@ -24,6 +26,8 @@ flake8:
   stage: codesyntax
   image: python:3.10
   script:
+    - pip install -U pip 
+    - pip install -r requirements.txt
     - flake8 --config .flake8 .
   only:
     - branches
@@ -33,6 +37,8 @@ coverage:
   image: python:3.10
   coverage: '/^TOTAL.+\s(\d+\.\d+\%)$/'
   script:
+    - pip install -U pip
+    - pip install -r requirements.txt
     - coverage run --rcfile .coveragerc -m unittest discover
     - coverage report --rcfile .coveragerc --precision=2
     - coverage xml
