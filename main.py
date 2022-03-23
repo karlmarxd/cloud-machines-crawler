@@ -24,14 +24,13 @@ def step_four():
     digitalocean_machines.save_csv()
     digitalocean_machines.save_json()
 
-
-#    linode_machines.print()
-#    linode_machines.save_csv()
-#    linode_machines.save_json()
+    linode_machines.print()
+    linode_machines.save_csv()
+    linode_machines.save_json()
 
 
 def main():
-    #    step_three()
+    step_three()
     step_four()
 
 
