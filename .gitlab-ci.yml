@@ -1,6 +1,6 @@
 stages:
   - begin
-  - codesyntax
+  - codesistence
   - test
 
 install:
@@ -13,7 +13,7 @@ install:
     - branches
 
 black:
-  stage: linting+formatting
+  stage: codesistence
   image: python:3.10
   script:
     - pip install -U pip 
@@ -23,7 +23,7 @@ black:
     - branches
 
 flake8:
-  stage: codesyntax
+  stage: codesistence
   image: python:3.10
   script:
     - pip install -U pip 
