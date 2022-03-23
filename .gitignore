@@ -1,0 +1,7 @@
+*.pyc
+__pycache__
+.coverage
+coverage.xml
+.python-version
+*_machines.json
+*_machines.csv

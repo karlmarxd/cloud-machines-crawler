@@ -1,0 +1,45 @@
+stages:
+  - begin
+  - codesyntax
+  - test
+
+install:
+  stage: begin
+  image: python:3.10
+  script:
+    - pip install -U pip
+    - pip install -r requirements.txt
+  only:
+    - branches
+
+black:
+  stage: codesyntax
+  image: python:3.10
+  script:
+    - black --config pyproject.toml --check .
+  only:
+    - branches
+
+flake8:
+  stage: codesyntax
+  image: python:3.10
+  script:
+    - flake8 --config .flake8 .
+  only:
+    - branches
+
+coverage:
+  stage: test
+  image: python:3.10
+  coverage: '/^TOTAL.+\s(\d+\.\d+\%)$/'
+  script:
+    - coverage run --rcfile .coveragerc -m unittest discover
+    - coverage report --rcfile .coveragerc --precision=2
+    - coverage xml
+  artifacts:
+    paths:
+      - coverage.xml
+    reports:
+      cobertura: coverage.xml
+  only:
+    - branches
