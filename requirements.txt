@@ -7,7 +7,6 @@ cssselect==1.1.0
 flake8==4.0.1
 greenlet==1.1.2
 idna==3.3
-isort==5.10.1
 lxml==4.8.0
 mccabe==0.6.1
 mypy-extensions==0.4.3
