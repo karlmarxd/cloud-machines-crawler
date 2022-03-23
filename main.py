@@ -2,6 +2,7 @@ from machinescrawlers import MachinesCrawler
 
 vultr_machines = MachinesCrawler("vultr")
 linode_machines = MachinesCrawler("linode")
+digitalocean_machines = MachinesCrawler("digitalocean")
 
 
 def step_one():
@@ -19,13 +20,18 @@ def step_three():
 
 
 def step_four():
-    linode_machines.print()
-    linode_machines.save_csv()
-    linode_machines.save_json()
+    digitalocean_machines.print()
+    digitalocean_machines.save_csv()
+    digitalocean_machines.save_json()
+
+
+#    linode_machines.print()
+#    linode_machines.save_csv()
+#    linode_machines.save_json()
 
 
 def main():
-    step_three()
+    #    step_three()
     step_four()
 
 

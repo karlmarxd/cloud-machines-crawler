@@ -6,8 +6,10 @@ from pprint import pprint
 import requests
 from requests import Response
 
-from machinescrawlers.linode import LinodeMachinesCrawler
 from machinescrawlers.vultr import VultrMachinesCrawler
+from machinescrawlers.digitalocean import DigitalOceanMachinesCrawler
+from machinescrawlers.linode import LinodeMachinesCrawler
+
 
 from .settings import FILES_DIR
 
@@ -15,6 +17,7 @@ from .settings import FILES_DIR
 class MachinesCrawler:
     _platforms: dict = {
         "vultr": VultrMachinesCrawler,
+        "digitalocean": DigitalOceanMachinesCrawler,
         "linode": LinodeMachinesCrawler,
     }
     machines: list[dict[str, str]] = []
