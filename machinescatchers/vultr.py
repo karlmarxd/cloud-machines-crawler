@@ -1,7 +1,7 @@
 from parsel import Selector
 
 
-class VultrMachinesCrawler:
+class VultrMachinesCatcher:
     platform = "vultr"
     page_url = "https://www.vultr.com/pricing/#cloud-compute"
 

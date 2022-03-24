@@ -1,8 +1,8 @@
-from machinescrawlers import MachinesCrawler
+from machinescatchers import MachinesCatcher
 
-vultr_machines = MachinesCrawler("vultr")
-linode_machines = MachinesCrawler("linode")
-digitalocean_machines = MachinesCrawler("digitalocean")
+vultr_machines = MachinesCatcher("vultr")
+linode_machines = MachinesCatcher("linode")
+digitalocean_machines = MachinesCatcher("digitalocean")
 
 
 def step_one():

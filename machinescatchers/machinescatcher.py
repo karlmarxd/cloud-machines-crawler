@@ -6,19 +6,18 @@ from pprint import pprint
 import requests
 from requests import Response
 
-from machinescrawlers.vultr import VultrMachinesCrawler
-from machinescrawlers.digitalocean import DigitalOceanMachinesCrawler
-from machinescrawlers.linode import LinodeMachinesCrawler
-
+from machinescatchers.digitalocean import DigitalOceanMachinesCatcher
+from machinescatchers.linode import LinodeMachinesCatcher
+from machinescatchers.vultr import VultrMachinesCatcher
 
 from .settings import FILES_DIR
 
 
-class MachinesCrawler:
+class MachinesCatcher:
     _platforms: dict = {
-        "vultr": VultrMachinesCrawler,
-        "digitalocean": DigitalOceanMachinesCrawler,
-        "linode": LinodeMachinesCrawler,
+        "vultr": VultrMachinesCatcher,
+        "digitalocean": DigitalOceanMachinesCatcher,
+        "linode": LinodeMachinesCatcher,
     }
     machines: list[dict[str, str]] = []
     page_body: str = ""

@@ -1,11 +1,11 @@
 import re
-import requests
-import chompjs
 
+import chompjs
+import requests
 from parsel import Selector
 
 
-class DigitalOceanMachinesCrawler:
+class DigitalOceanMachinesCatcher:
     platform = "digitalocean"
     page_url = "https://www.digitalocean.com/pricing"
     _base_url = "https://www.digitalocean.com"

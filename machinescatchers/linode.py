@@ -1,7 +1,7 @@
 from parsel import Selector
 
 
-class LinodeMachinesCrawler:
+class LinodeMachinesCatcher:
     platform = "linode"
     page_url = "https://www.linode.com/pricing/"
 

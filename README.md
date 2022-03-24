@@ -1,11 +1,11 @@
-# Cloud Machines Crawler
+# Cloud Machines Catcher
 
 
 
 ## Getting started
 
 ```
-git clone https://gitlab.com/marxsouza12/cloud-machines-crawler.git
+git clone https://gitlab.com/marxsouza12/cloud-machines-catcher.git
 pip install -r requirements.txt
 python main.py
 ```
